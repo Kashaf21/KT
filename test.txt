@@ -1,0 +1,72 @@
+class Intern{
+
+    public Intern(){}
+
+    public void InternBenefits(){
+
+        String[] benefits = {"Bonus for Extra Time", "Free Transport", "Scholarship"};
+	for (int i = 0; i < benefits.length; i++) {
+  		System.out.println(benefits[i]);
+
+    }
+
+}
+}
+
+ 
+
+class Developer extends Intern{
+
+    public Developer() {}
+
+    public void DeveloperBenefits(){
+	
+	Developer dev= new Developer();
+	dev.InternBenefits();
+        String[] benefits = {"Lunch", "Holidays", "Health Insurance"};
+for (int i = 0; i < benefits.length; i++) {
+  System.out.println(benefits[i]);
+
+    }
+
+}
+
+ 
+}
+class Manager extends Developer{
+
+    public Manager() {}
+
+    public void ManagerBenefits(){
+	Manager manager=new Manager();
+	manager.DeveloperBenefits();
+        String[] benefits = {"Free Medical", "Food", "Housing", "No Tax "};
+for (int i = 0; i < benefits.length; i++) {
+  System.out.println(benefits[i]);
+
+    }
+
+}
+}
+
+class Test {
+
+    public static void main(String[] args){
+
+      
+        System.out.println("These are the benefits of intern\n");
+       Intern intern= new Intern();
+	 intern.InternBenefits();
+
+	System.out.println("\nThese are the benefits of Developers\n");
+       Developer developer= new Developer();
+	developer.DeveloperBenefits();
+
+	System.out.println("\nThese are the benefits of Manager");
+        Manager manager=new Manager();
+	manager.ManagerBenefits();
+	
+
+    }
+
+}
